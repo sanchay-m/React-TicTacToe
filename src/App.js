@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 
-function Square({value}){
+function Square(){
+const[value ,setValue] =useState(null);
 function handleClick(){
 
-console.log('clicked !')
+setValue('X');
 
 }
 
@@ -34,7 +36,7 @@ onClick={handleClick}
          <Square value ="3" />
          </div>
 
-         <div className="board-row">
+       <div className="board-row">
        <Square value ="1" />
        <Square value ="2" />
        <Square value ="3" />
